@@ -1,0 +1,21 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter array size:");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[n];
+
+        Console.WriteLine("Enter array elements:");
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        var duplicates = arr.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => g.Key);
+        Console.WriteLine("Duplicate elements: " + string.Join(", ", duplicates));
+    }
+}
