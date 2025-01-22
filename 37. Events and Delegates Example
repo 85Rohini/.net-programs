@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    public delegate void Notify(); // Declare a delegate
+    public static event Notify OnNotify; // Declare an event
+
+    static void Main()
+    {
+        OnNotify += () => Console.WriteLine("Event triggered!");
+        TriggerEvent();
+    }
+
+    static void TriggerEvent()
+    {
+        if (OnNotify != null)
+        {
+            OnNotify.Invoke();
+        }
+    }
+}
