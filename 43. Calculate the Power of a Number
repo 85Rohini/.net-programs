@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter base:");
+        int baseNum = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter exponent:");
+        int exponent = Convert.ToInt32(Console.ReadLine());
+
+        double result = Math.Pow(baseNum, exponent);
+        Console.WriteLine("Result: " + result);
+    }
+}
