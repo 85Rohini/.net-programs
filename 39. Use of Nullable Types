@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int? num = null;
+
+        Console.WriteLine("Nullable value: " + (num.HasValue ? num.ToString() : "null"));
+
+        num = 42;
+        Console.WriteLine("Nullable value after assignment: " + num);
+    }
+}
