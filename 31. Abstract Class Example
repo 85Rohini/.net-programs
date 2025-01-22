@@ -1,0 +1,23 @@
+using System;
+
+abstract class Shape
+{
+    public abstract void Draw();
+}
+
+class Rectangle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a rectangle...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Shape shape = new Rectangle();
+        shape.Draw();
+    }
+}
